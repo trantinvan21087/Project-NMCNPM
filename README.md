@@ -11,7 +11,7 @@ Hiện tại, giáo dục và công nghệ hoá đang là một trong những xu
 ### 2. Thông tin thành viên
 | Họ và tên | MSSV | Lớp |
 | --- | --- | --- |
-| ~~Trần Tín Văn~~ | ~~19120714~~ | ~~19_22~~|
+| Trần Tín Văn (pending) | 19120714 | 19_22 |
 | Đỗ Nhật Toàn | 19120688 | 19_22 |
 | Đinh Nhật Tường | 19120709 | 19_22 |
 | Đào Xuân Tùng | 19120707 | 19_22 |
