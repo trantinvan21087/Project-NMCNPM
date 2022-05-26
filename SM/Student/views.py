@@ -23,7 +23,13 @@ def studentList(request):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['Student'])
 def studentProfile(request):
-	return render(request,"Student/studentProfile.html")
+	scores = request.user.Student.score_set.all()
+	for i in scores:
+		if i.semester == 'học kỳ 1':
+			hk1 = i
+	print(hk1.Toan)
+	context = {'hk1':hk1}
+	return render(request,"Student/studentProfile.html",context)
 
 @unauthenticated_user
 def loginPage(request):

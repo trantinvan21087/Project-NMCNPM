@@ -51,7 +51,12 @@ class Teacher(models.Model):
 	sex = models.CharField(max_length = 200, null = True, choices = GIOITINH)
 	birthday = models.DateField(null = True)
 	email = models.CharField(max_length = 200, null = True)
-	subject = models.ForeignKey(Subject,null = True, on_delete = models.SET_NULL)
+	SUBJECT = (
+			('Toán','Toán'),('Lý','Lý'),('Hóa','Hóa')
+			,('Sinh','Sinh'),('Sử','Sử'),('Địa','Địa')
+			,('Văn','Văn'),('Đạo đức','Đạo đức'),('Thể dục','Thể dục'),
+		)
+	subject = models.CharField(max_length = 200, null = True, choices = SUBJECT, unique = True)
 	classes = models.ManyToManyField(Classes)
 	def __str__(self):
 		return self.name
@@ -62,9 +67,18 @@ class Score(models.Model):
 		)
 	semester = models.CharField(max_length = 200, null = True, choices = SEMESTER)
 	students = models.ForeignKey(Student, null = True, on_delete = models.SET_NULL)
-	subject = models.ForeignKey(Subject,null = True, on_delete = models.SET_NULL)
-	score = models.CharField(max_length = 5, null = True)
+
+	Toan = models.CharField(max_length = 200,default="",blank = True )
+	Ly = models.CharField(max_length = 200,default="",blank = True)
+	Hoa = models.CharField(max_length = 200,default="",blank = True)
+	Sinh = models.CharField(max_length = 200,default="",blank = True)
+	Su = models.CharField(max_length = 200,default="",blank = True)
+	Dia = models.CharField(max_length = 200,default="",blank = True)
+	Van = models.CharField(max_length = 200,default="",blank = True)
+	Daoduc = models.CharField(max_length = 200,default="",blank = True)
+	TheDuc = models.CharField(max_length = 200,default="",blank = True)
+
 	class Meta:
-		unique_together = ('semester', 'students','subject')
+		unique_together = ('semester', 'students')
 	def __str__(self):
-		return self.students.name +'-' + self.subject.name+'-'+self.semester
+		return self.students.name +' '+self.semester
