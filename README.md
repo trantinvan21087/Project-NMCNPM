@@ -1,6 +1,6 @@
 # <center> ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM </center>
 
-## <center>ĐỀ TÀI QUẢN LÝ HỌC SINH </center>
+## <center> ĐỀ TÀI QUẢN LÝ HỌC SINH </center>
 
 ### 1. Giới thiệu project 
 Nhóm quá vip pờ rồ
