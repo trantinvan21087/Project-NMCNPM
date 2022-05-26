@@ -1,3 +1,13 @@
+# ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM
+
+## ĐỀ TÀI QUẢN LÝ HỌC SINH
+
+### 1. Giới thiệu project
+asdjkasdjkasjdklajsdl
+
+
+
+
 [Ghi chú 2: Mỗi project ngoài mã nguồn còn có file README.md đặt ở thư mục gốc. Có thể dùng trình editor Visual Studio Code (phải cài đặt plugin làm việc với Markdown) hoặc trình editor online https://stackedit.io/app cho file README.md.
 File README.md thường có nội dung mở với cấu trúc tùy ý, trong môn học này yêu cầu các mục chính trong file README.md như sau:
 - Giới thiệu project
