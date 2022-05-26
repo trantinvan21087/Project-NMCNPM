@@ -87,7 +87,20 @@ h2 {
     margin-top: 20px;
 }
 
+.edit-info-i {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
+.edit-info-i label {
+    font-size: 20px;
+}
+
+.edit-info-i input, .edit-info-i select {
+    block-size: 30px;
+    width: 180px;
+    font-size: 18px;
+}
 
 /*Because divided into column so using display flex and assign values for waiting
 list, information-studen, and other withi 0.2, 0.6, 0.2*/
