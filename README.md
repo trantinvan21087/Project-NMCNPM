@@ -1,7 +1,7 @@
 <h1 align="center">ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM</h1>
-# <center> ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM </center>
 
-## <center> ĐỀ TÀI QUẢN LÝ HỌC SINH </center>
+<h2 align="center">ĐỀ TÀI QUẢN LÝ HỌC SINH</h2>
+
 
 ### 1. Giới thiệu project 
 Nhóm quá vip pờ rồ
