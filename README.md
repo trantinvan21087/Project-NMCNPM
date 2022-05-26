@@ -27,7 +27,7 @@ Local PC cần phải tối thiểu cài đặt được Django và Python để
 TBA
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
-[Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing)
+[Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing) (TBA)
 
 ### 7. Current status  <!-- Current status: tóm tắt những gì đã hoàn thành (có thể bổ sung cho đến present cuối kỳ) -->
 TBA
