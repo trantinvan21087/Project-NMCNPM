@@ -20,6 +20,8 @@ def home(request):
 def studentList(request):
 	return HttpResponse('studentList')
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Student'])
 def studentProfile(request):
 	return render(request,"Student/studentProfile.html")
 
@@ -51,6 +53,11 @@ def register(request):
 
 			group = Group.objects.get(name='Student')
 			user.groups.add(group)
+
+			Student.objects.create(
+				user=user,
+				name=user.username,
+				)
 			messages.success(request,'Account was created for ' + username)
 			return redirect('login')
 	context = {'form':form }
@@ -77,3 +84,19 @@ def teacherReport(request):
 
 def changeRule(request):
 	return HttpResponse('changeRule')
+
+
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Student'])
+def accountSettings(request):
+	user = request.user.Student
+	form = CustomerForm(instance=user)
+
+	if request.method == 'POST':
+		form = CustomerForm(request.POST, request.FILES,instance=user)
+		if form.is_valid():
+			form.save()
+
+
+	context = {'form':form}
+	return render(request, 'Student/account_setting.html', context)

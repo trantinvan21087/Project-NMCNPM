@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 class Classes(models.Model):
 	CATEGORY = (
@@ -12,15 +12,16 @@ class Classes(models.Model):
 		return self.name
 
 class Student(models.Model):
+	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE,related_name='Student')
 	name = models.CharField(max_length = 200, null = True)
 	GIOITINH = (
 		('Nam','Nam'),
-		('Nữ','Nũ'),
+		('Nữ','Nữ'),
 		)
 	sex = models.CharField(max_length = 200, null = True, choices = GIOITINH)
 	birthday = models.DateField(null = True)
 	email = models.CharField(max_length = 200, null = True)
-
+	house_location = models.CharField(max_length = 200, null = True)
 	def __str__(self):
 		return self.name
 
