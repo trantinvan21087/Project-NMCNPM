@@ -4,7 +4,7 @@
 
 
 ### 1. Giới thiệu project 
-Nhóm quá vip pờ rồ
+Hiện tại, giáo dục và công nghệ hoá đang là 1 trong những xu hướng toàn cầu. Vì giáo dục luôn được thực hiện và xuyên suốt, nên loại phần mềm quản lý học sinh sẽ đáp ứng được xu thế hiện đại hoá và nhu cầu giáo dục hiện nay.
 
 ### 2. Thông tin thành viên
 | Họ và tên | MSSV | Lớp |
