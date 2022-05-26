@@ -2,6 +2,8 @@
 
 <h2 align="center">ĐỀ TÀI QUẢN LÝ HỌC SINH</h2>
 
+<h2 align="center"> <font size="10">GVHD: Bùi Tấn Lộc</font></h2>
+
 
 ### 1. Giới thiệu project 
 Hiện tại, giáo dục và công nghệ hoá đang là một trong những xu hướng toàn cầu. Vì giáo dục luôn được thực hiện và xuyên suốt, nên loại phần mềm quản lý học sinh sẽ đáp ứng được xu thế hiện đại hoá và nhu cầu giáo dục hiện nay.
