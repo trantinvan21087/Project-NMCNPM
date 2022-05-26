@@ -89,7 +89,7 @@ def acceptStudent(request):
 	return HttpResponse('Login')
 
 def searchStudent(request):
-	return HttpResponse('searchStudent')
+	return render(request, 'Student/searchStudent.html')
 
 def createClass(request):
 	return HttpResponse('createClass')
