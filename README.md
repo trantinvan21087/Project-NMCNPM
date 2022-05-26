@@ -2,7 +2,7 @@
 
 ## <center>ĐỀ TÀI QUẢN LÝ HỌC SINH </center>
 
-### 1. Giới thiệu project
+### 1. Giới thiệu project <!--- Wrap text --->
 Nhóm quá vip pờ rồ
 
 ### 2. Thông tin thành viên
