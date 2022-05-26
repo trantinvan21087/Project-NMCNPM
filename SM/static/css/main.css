@@ -83,7 +83,7 @@ h2 {
 
 .search {
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
     margin-top: 20px;
 }
 
@@ -286,7 +286,19 @@ h4 {
     margin-top: 100px;
 }
 
-.btn-tiep-nhan:hover {
+.btn-tiep-nhan-1 {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 240px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+}
+
+.btn-tiep-nhan:hover, .btn-tiep-nhan-1:hover {
     background-color: coral;
 }
 
