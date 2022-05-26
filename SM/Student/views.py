@@ -15,7 +15,7 @@ from django.contrib.auth.decorators import login_required
 @login_required(login_url='login')
 @admin_only
 def home(request):
-	return render(request,"Student/dashboard.html")
+	return redirect('/admin')
 
 def studentList(request):
 	return HttpResponse('studentList')
@@ -27,6 +27,8 @@ def studentProfile(request):
 	for i in scores:
 		if i.semester == 'học kỳ 1':
 			hk1 = i
+		else:
+			hk2 = i
 	print(hk1.Toan)
 	context = {'hk1':hk1}
 	return render(request,"Student/studentProfile.html",context)
@@ -64,6 +66,16 @@ def register(request):
 				user=user,
 				name=user.username,
 				)
+
+			Score.objects.create(
+				students = user.Student,
+				semester = "học kỳ 1",
+				)
+			Score.objects.create(
+				students = user.Student,
+				semester = "học kỳ 2",
+				)
+
 			messages.success(request,'Account was created for ' + username)
 			return redirect('login')
 	context = {'form':form }
@@ -102,6 +114,7 @@ def accountSettings(request):
 		form = CustomerForm(request.POST, request.FILES,instance=user)
 		if form.is_valid():
 			form.save()
+			return redirect('studentProfile')
 
 
 	context = {'form':form}
