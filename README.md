@@ -2,7 +2,7 @@
 
 <h2 align="center">ĐỀ TÀI QUẢN LÝ HỌC SINH</h2>
 
-<h2 align="center"> <font size="10">GVHD: Bùi Tấn Lộc</font></h2>
+<h2 align="center"> <font size="5">GVHD: Bùi Tấn Lộc</font></h2>
 
 
 ### 1. Giới thiệu project 
