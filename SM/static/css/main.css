@@ -87,12 +87,19 @@ h2 {
     margin-top: 20px;
 }
 
+
+
 .edit-info-i {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.edit-info-i label {
+.edit-score {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.edit-info-i label, .edit-score label {
     font-size: 20px;
 }
 
@@ -100,6 +107,12 @@ h2 {
     block-size: 30px;
     width: 180px;
     font-size: 18px;
+}
+
+.edit-score input {
+    width: 50px;
+    font-size: 15px;
+    block-size: 25px;
 }
 
 /*Because divided into column so using display flex and assign values for waiting
@@ -133,6 +146,7 @@ list, information-studen, and other withi 0.2, 0.6, 0.2*/
     height: 580px;
     padding: 20px;
     margin: 20px;
+    text-align: center;
 }
 
 .info {
@@ -166,7 +180,6 @@ list, information-studen, and other withi 0.2, 0.6, 0.2*/
     height: 580px;
     margin: 20px;
 }
-
 
 
 .waiting-list p, .class-list p {
@@ -258,14 +271,15 @@ h4 {
 
 .info-name p {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
+    padding-bottom: 10px;
 }
 
 .info-name {
     flex: 0.4;
     border: 1px solid brown;
     border-radius: 4px;
-    height: 380px;
+    height: 100%;
     padding: 20px;
     margin: 20px;
 }
@@ -273,7 +287,7 @@ h4 {
     flex: 0.3;
     border: 1px solid brown;
     border-radius: 4px;
-    height: 380px;
+    height: 100%;
     padding: 20px;
     margin: 20px;
 }
@@ -311,7 +325,33 @@ h4 {
     margin-top: 5px;
 }
 
-.btn-tiep-nhan:hover, .btn-tiep-nhan-1:hover {
+.btn-tiep-nhan-2 {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+}
+
+.btn-tiep-nhan:hover,
+.btn-tiep-nhan-1:hover, 
+.btn-tiep-nhan-2:hover{
+    background-color: coral;
+}
+
+.edit-diem {
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 50px;
+    padding: 2px;
+    text-align: center;
+}
+
+.edit-diem:hover {
     background-color: coral;
 }
 
@@ -340,6 +380,32 @@ h4 {
     text-align: center;
     list-style-type: none;
     padding-bottom: 10px;
+}
+
+.ho-ten, .diem-hk1, .diem-hk2, .chinh-sua {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ho-ten {
+    flex: 0.4;
+}
+
+.diem-hk1, .diem-hk2, .chinh-sua {
+    flex: 0.2;
+}
+
+.ho-ten p, .diem-hk1 p, .diem-hk2 p,
+.chinh-sua p {
+    padding-bottom: 30px;
+    
+}
+
+.ho-ten li, .diem-hk1 li, .diem-hk2 li,
+.chinh-sua li {
+    list-style-type: none;
+    font-weight: normal;
+    padding-bottom: 20px;
 }
 
 .create-list h3 {
