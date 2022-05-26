@@ -14,8 +14,7 @@ Nhóm quá vip pờ rồ
 | Đào Xuân Tùng | 19120707 | 19_22 |
 | Mai Dương Nguyên Trường | 19120698 | 19_22 |
 
-### 3. Thông tin môi trường <!--- Môi trường thực thi (phiên bản hệ điều hành, SDK, Dev Tools, cơ sở dữ liệu, etc.)
--->
+### 3. Thông tin môi trường <!--- Môi trường thực thi (phiên bản hệ điều hành, SDK, Dev Tools, cơ sở dữ liệu, etc.) --->
 Đồ án này được xây dựng bằng Django bla bla
 
 ### 4. Cấu hình  <!--- Hướng dẫn cấu hình project chạy local PC.
