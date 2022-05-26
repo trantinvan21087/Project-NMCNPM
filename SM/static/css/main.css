@@ -42,12 +42,26 @@ body {
     display: inline;
     padding: 10px;
 }
+
+
 .search input {
     block-size: 30px;
     width: 180px;
     font-size: 20px;
 }
 
+#choice1, #choice2 {
+    block-size: 15px;
+    
+}
+
+
+
+.search label {
+    font-weight: normal;
+    font-size: 20px;
+    
+}
 
 .choice a {
     color: coral;
@@ -56,7 +70,6 @@ body {
 h2 {
     color: darkgoldenrod;
     padding-inline-start: 10px;
-    margin-left: 10px;
     margin-top: 10px;
     font-size: 30px;
     margin-left: 100px;
@@ -68,12 +81,39 @@ h2 {
     height: 100%;
 }
 
+.search {
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+}
+
+
 
 /*Because divided into column so using display flex and assign values for waiting
 list, information-studen, and other withi 0.2, 0.6, 0.2*/
 
 .waiting-list {
     flex: 0.2;
+    border: 1px solid brown;
+    border-radius: 4px;
+    /*Css for class waiting-list*/
+    height: 580px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.class-list {
+    flex: 0.2;
+    border: 1px solid brown;
+    border-radius: 4px;
+    /*Css for class waiting-list*/
+    height: 580px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.class-info {
+    flex: 0.6;
     border: 1px solid brown;
     border-radius: 4px;
     /*Css for class waiting-list*/
@@ -116,13 +156,14 @@ list, information-studen, and other withi 0.2, 0.6, 0.2*/
 
 
 
-.waiting-list p {
+.waiting-list p, .class-list p {
     margin: 10px 0px;
     /*Css for class waiting-list and tag p*/
     padding: 14px;
+    text-align: center;
 }
 
-#userone {
+#userone, #classone {
     /*Css for list user in waiting list to delete underline */
     text-decoration: none;
     padding: 5px;
@@ -134,7 +175,7 @@ list, information-studen, and other withi 0.2, 0.6, 0.2*/
     font-size: large;
 }
 
-#userone:hover {
+#userone:hover, #classone:hover {
     background-color: wheat;
     border: 1px solid black;
 }
@@ -174,6 +215,54 @@ h4 {
     text-align: center;
     padding-bottom: 20px;
     font-size: 15px;
+}
+
+.info-name h4 {
+    text-align: center;
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+.score-name h4 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.hk-tb {
+    flex: 0.5;
+}
+
+.hk-tb p {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.hk-tb span {
+    text-align: center;
+}
+
+.info-name p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.info-name {
+    flex: 0.4;
+    border: 1px solid brown;
+    border-radius: 4px;
+    height: 380px;
+    padding: 20px;
+    margin: 20px;
+}
+.score-name {
+    flex: 0.3;
+    border: 1px solid brown;
+    border-radius: 4px;
+    height: 380px;
+    padding: 20px;
+    margin: 20px;
 }
 
 .information-student h3 {
@@ -221,7 +310,8 @@ h4 {
     margin-left: 40px;
 }
 
-.mon-hoc li, .hk1 li, .hk2 li {
+.mon-hoc li, .hk1 li, .hk2 li,
+.hk-tb li {
     text-align: center;
     list-style-type: none;
     padding-bottom: 10px;
