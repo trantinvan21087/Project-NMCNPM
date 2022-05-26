@@ -5,7 +5,15 @@
 ### 1. Giới thiệu project
 asdjkasdjkasjdklajsdl
 
-### 2. 
+### 2. Thông tin thành viên
+| Họ và tên | MSSV | Lớp |
+| --- | --- | --- |
+| Đỗ Nhật Toàn | 19120688 | 19_21 |
+| Đinh Nhật Tường | 19120709 | 19_21 |
+
+### 3. Thông tin môi trường
+
+
 
 
 [Ghi chú 2: Mỗi project ngoài mã nguồn còn có file README.md đặt ở thư mục gốc. Có thể dùng trình editor Visual Studio Code (phải cài đặt plugin làm việc với Markdown) hoặc trình editor online https://stackedit.io/app cho file README.md.
