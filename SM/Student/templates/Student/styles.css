@@ -96,6 +96,22 @@ list, information-studen, and other withi 0.2, 0.6, 0.2*/
     margin: 20px;
 }
 
+
+
+.mon-hoc {
+    flex: 0.3;
+    height: 580px;
+    margin: 20px;
+}
+
+.hk1, .hk2 {
+    flex: 0.35;
+    height: 580px;
+    margin: 20px;
+}
+
+
+
 .waiting-list p {
     margin: 10px 0px;
     /*Css for class waiting-list and tag p*/
@@ -146,6 +162,16 @@ h3 {
     font-size: 25px;
 }
 
+.score h3 {
+    padding-bottom: 5px;
+}
+
+h4 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 15px;
+}
+
 .information-student h3 {
     font-size: 30px;
 }
@@ -183,17 +209,18 @@ h3 {
     padding-bottom: 20px;
 }
 
+
+
 .create-list li {
     margin: 10px;
     list-style-type: none;
     margin-left: 40px;
 }
 
-.score li {
-    margin: 10px;
+.mon-hoc li, .hk1 li, .hk2 li {
+    text-align: center;
     list-style-type: none;
-    margin-left: 100px;
-    font-size: 20px;
+    padding-bottom: 10px;
 }
 
 .create-list h3 {
