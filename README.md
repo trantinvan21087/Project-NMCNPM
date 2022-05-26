@@ -1,11 +1,11 @@
-# ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM
+# <center> ĐỒ ÁN NHẬP MÔN CÔNG NGHỆ PHẦN MỀM </center>
 
-## ĐỀ TÀI QUẢN LÝ HỌC SINH
+## <center>ĐỀ TÀI QUẢN LÝ HỌC SINH </center>
 
 ### 1. Giới thiệu project
 asdjkasdjkasjdklajsdl
 
-
+### 2. 
 
 
 [Ghi chú 2: Mỗi project ngoài mã nguồn còn có file README.md đặt ở thư mục gốc. Có thể dùng trình editor Visual Studio Code (phải cài đặt plugin làm việc với Markdown) hoặc trình editor online https://stackedit.io/app cho file README.md.
