@@ -1,4 +1,4 @@
-{% load static %}
+    {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,25 +25,23 @@
             <div class="content">
                 <div class="search">
                     <div>
-                        <h3>Nhập tên: 
-                            <input type="text">
-                        </h3>
-                    </div>
-                    <div>
-                            <input type="radio" name="choice-search" id="choice1">
-                            <label for="choice1">Có chứa</label>
-                            <input type="radio" name="choice-search" id="choice2">
-                            <label for="choice2">Bằng</label>
+                        <form method="get">
+                            {{myFilter.form}}
+
+                            <button class="btn btn-primary" type="submit">Search</button>
+
+                        </form>
                             
                     </div>
                     
                 </div>
             </div>
-            <button type="submit" class="btn-tiep-nhan-1">Tìm kiếm</button>
             <div class="content">
                 <div class="info-name">
                     <h4>Họ tên</h4>
-                    <p>Đinh Nhật Tường</p>
+                    {% for i in students %}
+                    <p>{{i.name}}</p>
+                    {% endfor %}
                 </div>
                 <div class="score-name">
                     <h4>Điểm trung bình</h4>
@@ -51,13 +49,17 @@
                         <div class="hk-tb">
                             <p>Học kỳ 1</p>
                             <ul>
-                                <li>10.0</li>
+                                {% for i in avgScores1 %}
+                                <li>{{i}}</li>
+                                {% endfor %}   
                             </ul>
                         </div>
                         <div class="hk-tb">
                             <p>Học kỳ 2</p>
                             <ul>
-                                <li>0.10</li>
+                                {% for i in avgScores2 %}
+                                <li>{{i}}</li>
+                                {% endfor %}
                             </ul>
                         </div>
 

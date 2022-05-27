@@ -66,19 +66,23 @@ class Score(models.Model):
 		('học kỳ 1','học kỳ 1'),('học kỳ 2','học kỳ 2')
 		)
 	semester = models.CharField(max_length = 200, null = True, choices = SEMESTER)
-	students = models.ForeignKey(Student, null = True, on_delete = models.SET_NULL)
+	students = models.ForeignKey(Student, null = True, on_delete = models.CASCADE)
 
-	Toan = models.CharField(max_length = 200,default="",blank = True )
-	Ly = models.CharField(max_length = 200,default="",blank = True)
-	Hoa = models.CharField(max_length = 200,default="",blank = True)
-	Sinh = models.CharField(max_length = 200,default="",blank = True)
-	Su = models.CharField(max_length = 200,default="",blank = True)
-	Dia = models.CharField(max_length = 200,default="",blank = True)
-	Van = models.CharField(max_length = 200,default="",blank = True)
-	Daoduc = models.CharField(max_length = 200,default="",blank = True)
-	TheDuc = models.CharField(max_length = 200,default="",blank = True)
-
+	Toan = models.FloatField(default=0)
+	Ly =  models.FloatField(default=0)
+	Hoa =  models.FloatField(default=0)
+	Sinh =  models.FloatField(default=0)
+	Su = models.FloatField(default=0)
+	Dia = models.FloatField(default=0)
+	Van = models.FloatField(default=0)
+	Daoduc = models.FloatField(default=0)
+	TheDuc = models.FloatField(default=0)
 	class Meta:
 		unique_together = ('semester', 'students')
 	def __str__(self):
-		return self.students.name +' '+self.semester
+		return self.students.name +' '+ self.semester
+
+def AvgScore(Score):
+	return (float(Score.Toan) + float(Score.Ly) + float(Score.Hoa)
+	 + float(Score.Sinh) + float(Score.Su) + float(Score.Dia) 
+	 + float(Score.Van) + float(Score.Daoduc) + float(Score.TheDuc))/9

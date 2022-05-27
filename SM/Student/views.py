@@ -12,6 +12,8 @@ from .decorators import *
 from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required
 
+from .filters import StudentFilter
+
 @login_required(login_url='login')
 @admin_only
 def home(request):
@@ -30,7 +32,7 @@ def studentProfile(request):
 		else:
 			hk2 = i
 	print(hk1.Toan)
-	context = {'hk1':hk1}
+	context = {'hk1':hk1,'hk2':hk2}
 	return render(request,"Student/studentProfile.html",context)
 
 @unauthenticated_user
@@ -89,7 +91,23 @@ def acceptStudent(request):
 	return HttpResponse('Login')
 
 def searchStudent(request):
-	return render(request, 'Student/searchStudent.html')
+	students = Student.objects.all()
+	avgScores1 = []
+	avgScores2 = []
+
+	myFilter = StudentFilter(request.GET, queryset=students)
+	students = myFilter.qs 
+
+	for i in students:
+		temp = i.score_set.all()
+		for j in temp:
+			if j.semester == 'học kỳ 1':
+				avgScores1.append(AvgScore(j))
+			else:
+				avgScores2.append(AvgScore(j))
+				
+	context = {'students':students,'avgScores1':avgScores1,'avgScores2':avgScores2,'myFilter':myFilter}
+	return render(request, 'Student/searchStudent.html',context)
 
 def createClass(request):
 	return HttpResponse('createClass')
