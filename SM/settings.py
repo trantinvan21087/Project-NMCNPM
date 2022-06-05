@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-lza4bln96@p%aqy9fgk$l(ui5(1@l)8hwoux^5!-g#jzg-q^hc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'student-management-09.herokuapp.com'
+]
 
 
 # Application definition
@@ -120,7 +122,9 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 
-
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
