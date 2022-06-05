@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-lza4bln96@p%aqy9fgk$l(ui5(1@l)8hwoux^5!-g#jzg-q^hc
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'student-management-09.herokuapp.com'
+    'student-management-09.herokuapp.com',
+    '127.0.0.1'
+    
 ]
 
 
@@ -47,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
