@@ -26,6 +26,8 @@ Local PC cần phải tối thiểu cài đặt được Django và Python để
 ### 5. Hướng dẫn deploy  <!-- Hướng dẫn deploy project lên Heroku, Netlify, etc. (có thể bổ sung cho đến present cuối kỳ) -->
 Đăng nhập heroku thông qua terminal:
 ![image](https://user-images.githubusercontent.com/74363485/172047823-dd2f95e1-baf3-4fd3-810b-e44da06a24ee.png)
+Tạo app heroku:
+![image](https://user-images.githubusercontent.com/74363485/172047924-6057cce3-0498-49f9-b2d4-5acaf902f7b5.png)
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
 [Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing) (TBA)
