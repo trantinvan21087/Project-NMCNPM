@@ -1,3 +1,4 @@
+import requests
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.forms import inlineformset_factory
@@ -120,7 +121,6 @@ def teacherReport(request):
 
 def changeRule(request):
 	return HttpResponse('changeRule')
-
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['Student'])
