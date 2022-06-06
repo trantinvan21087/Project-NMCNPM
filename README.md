@@ -24,7 +24,8 @@ Hiện tại, giáo dục và công nghệ hoá đang là một trong những xu
 Local PC cần phải tối thiểu cài đặt được Django và Python để chạy đồ án này. Sau khi tải source đồ án, tiến hành cd đến thư mục Project-NMCNPM/SM/ và chạy lệnh `python manage.py runserver` để chạy server tại localhost.
 
 ### 5. Hướng dẫn deploy  <!-- Hướng dẫn deploy project lên Heroku, Netlify, etc. (có thể bổ sung cho đến present cuối kỳ) -->
-Deploy sử dụng Heroku
+Deploy sử dụng Heroku.
+
 Tải và cài đặt git,heroku cli:
 ![image](https://user-images.githubusercontent.com/74363485/172088514-84234e5b-78e1-4f38-8bcf-dc63b96e5f09.png)
 Đăng kí và đăng nhập tài khoản heroku trên web:
