@@ -28,22 +28,31 @@ Deploy sử dụng Heroku.
 
 Tải và cài đặt git,heroku cli:
 ![image](https://user-images.githubusercontent.com/74363485/172088514-84234e5b-78e1-4f38-8bcf-dc63b96e5f09.png)
+
 Đăng kí và đăng nhập tài khoản heroku trên web:
 ![image](https://user-images.githubusercontent.com/74363485/172088563-e0cf79a1-3ca2-4163-bbc1-cd32b0283d64.png)
+
 Sử dụng git clone repo từ github về và di chuyển đến đó:
 ![image](https://user-images.githubusercontent.com/74363485/172088643-7105c7f0-9014-4957-b244-1ff9508d703b.png)
+
 Đăng nhập heroku thông qua terminal:
 ![image](https://user-images.githubusercontent.com/74363485/172047823-dd2f95e1-baf3-4fd3-810b-e44da06a24ee.png)
+
 Tạo app heroku:
 ![image](https://user-images.githubusercontent.com/74363485/172047924-6057cce3-0498-49f9-b2d4-5acaf902f7b5.png)
+
 Tạo 1 file requirements.txt ở cùng thư mục project có chứa đầy đủ module của Python app:
 ![image](https://user-images.githubusercontent.com/74363485/172088353-98a65e1d-24ee-4396-a2c0-706898e9d0ea.png)
+
 Tạo 1 procfile cho python app:
 ![image](https://user-images.githubusercontent.com/74363485/172088773-e096c085-cfa7-43db-b4c3-16f017c95866.png)
+
 Tiến hành deploy app lên heroku:
 ![image](https://user-images.githubusercontent.com/74363485/172088711-06f7154a-9dd4-4399-aa74-6faeb79c803a.png)
+
 Truy cập tới trang web của app đã deploy lên heroku:
 ![image](https://user-images.githubusercontent.com/74363485/172088906-2eeeee0d-6289-4adb-8737-f040f411c6a0.png)
+
 
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
