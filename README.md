@@ -50,9 +50,14 @@ Tạo 1 procfile cho python app:
 Tiến hành deploy app lên heroku:
 ![image](https://user-images.githubusercontent.com/74363485/172088711-06f7154a-9dd4-4399-aa74-6faeb79c803a.png)
 
+Sử dụng lệnh check lỗi ở log nếu có:
+![image](https://user-images.githubusercontent.com/74363485/172089271-61c05bf4-d94d-4a57-b658-9ae791f71210.png)
+
 Truy cập tới trang web của app đã deploy lên heroku:
 ![image](https://user-images.githubusercontent.com/74363485/172088906-2eeeee0d-6289-4adb-8737-f040f411c6a0.png)
 
+Vào trang web Heroku để quản lý tài nguyên của app:
+![image](https://user-images.githubusercontent.com/74363485/172089149-323df58b-e0ea-4cde-81cc-9ac41e96eebe.png)
 
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
