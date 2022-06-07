@@ -9,5 +9,7 @@ urlpatterns = [
     path('login/', views.loginPage, name="login"),  
     path('logout/', views.logoutUser, name="logout"),
     path('studentSetting/',views.accountSettings, name = "studentSetting"),
-    path('searchStudent/',views.searchStudent, name = 'searchStudent')
+    path('searchStudent/',views.searchStudent, name = 'searchStudent'),
+    path('editScore/',views.editScore, name = 'editScore'),
+    path('createListStudent/',views.createListStudent, name = 'createListStudent'),
 ]

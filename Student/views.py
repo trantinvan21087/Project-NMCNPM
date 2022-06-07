@@ -113,14 +113,19 @@ def searchStudent(request):
 def createClass(request):
 	return HttpResponse('createClass')
 
-def studentPoint(request):
-	return HttpResponse('studentPoint')
+def editScore(request):
+	return render(request, 'Student/editScore.html')
+
+def createListStudent(request):
+	print(request)
+	return render(request, 'Student/createListStudent.html')
 
 def teacherReport(request):
 	return HttpResponse('teacherReport')
 
 def changeRule(request):
 	return HttpResponse('changeRule')
+
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['Student'])

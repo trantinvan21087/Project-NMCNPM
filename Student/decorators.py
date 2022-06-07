@@ -34,6 +34,9 @@ def admin_only(view_func):
 		if group == 'Student':
 			return redirect('studentProfile')
 
+		if group == 'Teacher':
+			return redirect('createListStudent')
+
 		if group == 'admin':
 			return view_func(request, *args, **kwargs)
 

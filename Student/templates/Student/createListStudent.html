@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
     <title>Danh sách lớp</title>
 </head>
 
@@ -16,13 +17,13 @@
                 <h1>TRƯỜNG ĐH KHOA HỌC TỰ NHIÊN</h1>
             </div>
             <div class="choice">
-                <p>Xin chào Tường, <a href="">Đăng xuất</a></p>
+                <p>Xin chào {{request.user}} <a href="{% url 'logout' %}">Đăng xuất</a></p>
             </div>
         </div>
         <h2>DANH SÁCH LỚP</h2>
         <div class="content">
             <div class="class-list">
-                <p><a href="./createListStudent.html" id="classone">12A1</a></p>
+                <p><a id="classone" href="{% url 'createListStudent' %}">12A1</a></p>
                 <p>Lớp 2</p>
                 <p>Lớp 3</p>
                 <p>Lớp 4</p>
