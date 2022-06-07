@@ -1,15 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
-class Classes(models.Model):
-	CATEGORY = (
-		('10A1','10A1'),('10A2','10A2'),('10A3','10A3'),('10A4','10A4')
-		,('11A1','11A1'),('11A2','11A2'),('11A3','11A3')
-		,('12A1','12A1'),('12A2','12A2'),
-		)
-	name = models.CharField(max_length = 200, null = True, choices = CATEGORY, unique = True)
-	def __str__(self):
-		return self.name
 
 class Student(models.Model):
 	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE,related_name='Student')
@@ -25,11 +16,16 @@ class Student(models.Model):
 	def __str__(self):
 		return self.name
 
-class ClassList(models.Model):
-	classes = models.ForeignKey(Classes,null = True, on_delete = models.SET_NULL)
-	Students = models.ForeignKey(Student, null = True, on_delete = models.SET_NULL)
+class Classes(models.Model):
+	CATEGORY = (
+		('10A1','10A1'),('10A2','10A2'),('10A3','10A3'),('10A4','10A4')
+		,('11A1','11A1'),('11A2','11A2'),('11A3','11A3')
+		,('12A1','12A1'),('12A2','12A2'),
+		)
+	name = models.CharField(max_length = 200, null = True, choices = CATEGORY, unique = True)
+	Students = models.ManyToManyField(Student)
 	def __str__(self):
-		return self.Students.name +' '+ self.classes.name
+		return self.name
 
 class Subject(models.Model):
 	SUBJECT = (
@@ -43,6 +39,7 @@ class Subject(models.Model):
 		return self.name
 
 class Teacher(models.Model):
+	user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE,related_name='Teacher')
 	name = models.CharField(max_length = 200, null = True)
 	GIOITINH = (
 		('Nam','Nam'),

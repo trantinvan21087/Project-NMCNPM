@@ -35,7 +35,8 @@ def admin_only(view_func):
 			return redirect('studentProfile')
 
 		if group == 'Teacher':
-			return redirect('createListStudent')
+			classes = str(request.user.Teacher.classes.all()[0].name)
+			return redirect('createListStudent',classes)
 
 		if group == 'admin':
 			return view_func(request, *args, **kwargs)
