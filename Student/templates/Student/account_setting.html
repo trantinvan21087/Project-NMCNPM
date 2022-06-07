@@ -23,32 +23,12 @@
         </div>
         <h2>CHỈNH SỬA THÔNG TIN</h2>
 		<div class="content">
-			<div class="edit-info">
-				<div class="edit-info-i">
-					<label for="ho-ten">Họ tên: </label>
-					<input type="text" id="ho-ten">
-				</div>
-				<div class="edit-info-i">
-					<label for="gioi-tinh">Giới tính: </label>
-					<select id="gioi-tinh">
-						<option>Nam</option>
-						<option>Nữ</option>
-					</select>
-				</div>
-				<div class="edit-info-i">
-					<label for="ngay-sinh">Ngày sinh: </label>
-					<input type="text" id="ngay-sinh">
-				</div>
-				<div class="edit-info-i">
-					<label for="email">Email: </label>
-					<input type="text" id="email">
-				</div>
-				<div class="edit-info-i">
-					<label for="dia-chi">Địa chỉ: </label>
-					<input type="text" id="dia-chi">
-				</div>
-				<button type="submit" class="btn-tiep-nhan-1">Xác nhận</button>
-			</div>
+			<form method="POST" action="" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.as_p}}
+		
+			<input class="btn btn-primary" type="submit" name="Update Information">
+			</form>
 		</div>
 
 	</div>
