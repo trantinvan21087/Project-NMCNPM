@@ -27,7 +27,7 @@
                     <h3>Thông tin</h3>
                     <div class="name-gender">
                         <p>Họ và Tên: {{request.user.Student.name}}</p>
-                        <p>Giới tính: Nam</p>
+                        <p>Giới tính: {{request.user.Student.sex}}</p>
                     </div>
                     <p>Ngày sinh: {{request.user.Student.birthday}}</p>
                     <p>Địa chỉ: {{request.user.Student.house_location}}</p>
