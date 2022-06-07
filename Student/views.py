@@ -116,10 +116,10 @@ def createClass(request):
 def editScore(request):
 	return render(request, 'Student/editScore.html')
 
-def createListStudent(request,classes):
-	print(request)
-	context = {classes}
-	return render(request, 'Student/createListStudent.html',classes)
+def createListStudent(request,classess):
+	context = {request.user.Teacher.classes.all()[0]:classes}
+	print(context)
+	return render(request, 'Student/createListStudent.html',context)
 
 def teacherReport(request):
 	return HttpResponse('teacherReport')

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import redirect
-
+from django.urls import reverse
+from django.shortcuts import get_object_or_404
 def unauthenticated_user(view_func):
 	def wrapper_func(request, *args, **kwargs):
 		if request.user.is_authenticated:
@@ -35,10 +36,10 @@ def admin_only(view_func):
 			return redirect('studentProfile')
 
 		if group == 'Teacher':
-			classes = str(request.user.Teacher.classes.all()[0].name)
-			return redirect('createListStudent',classes)
+			instance = request.user.Teacher.classes.all()[0].name
+			return redirect(reverse('createListStudent'),args = instance)
 
 		if group == 'admin':
 			return view_func(request, *args, **kwargs)
 
-	return wrapper_function
+	return wrapper_function	
