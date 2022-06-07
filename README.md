@@ -59,6 +59,7 @@ Truy cập tới trang web của app đã deploy lên heroku:
 Vào trang web Heroku để quản lý tài nguyên của app:
 ![image](https://user-images.githubusercontent.com/74363485/172089149-323df58b-e0ea-4cde-81cc-9ac41e96eebe.png)
 
+Đồ án được deploy tại [link](https://student-management-09.herokuapp.com/)
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
 [Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing) (TBA)
