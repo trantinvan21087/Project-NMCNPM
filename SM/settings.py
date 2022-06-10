@@ -31,7 +31,11 @@ ALLOWED_HOSTS = [
     'localhost'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://student-management-09.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'https://student-management-09.herokuapp.com',
+    'http://127.0.0.1',
+    'http://localhost'
+]
 # Application definition
 
 INSTALLED_APPS = [
