@@ -23,10 +23,9 @@
         <h2>DANH SÁCH LỚP</h2>
         <div class="content">
             <div class="class-list">
-                <p><a id="classone" href="{% url 'createListStudent' classes='12A1'%}">12A1</a></p>
-                <p>Lớp 2</p>
-                <p>Lớp 3</p>
-                <p>Lớp 4</p>
+                {% for i in classes %}
+                <p><a id="classone" href="{% url 'createListStudent' classes=i.name%}">{{i.name}}</a></p>
+                {% endfor %}
             </div>
             <div class="class-info">
                 <div class="content">
@@ -34,20 +33,12 @@
                         <p>Họ tên</p>
                         <ul>
                             <li>Đinh Nhật Tường</li>
-                            <li>Đinh Nhật Tường</li>
-                            <li>Đinh Nhật Tường</li>
-                            <li>Đinh Nhật Tường</li>
-                            <li>Đinh Nhật Tường</li>
                         </ul>
                     </div>
                     <div class="diem-hk1">
                         <p>TB học kỳ 1</p>
                         <ul>
                             <li>2</li>
-                            <li>6</li>
-                            <li>5.1</li>
-                            <li>1.5</li>
-                            <li>1</li>
                         </ul>
                     </div>
                     <div class="diem-hk2">

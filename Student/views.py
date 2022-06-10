@@ -117,8 +117,9 @@ def editScore(request):
 	return render(request, 'Student/editScore.html')
 
 def createListStudent(request,classes):
-	context = {request.user.Teacher.classes.all()[0]:classes}
-	print(context)
+	classes = request.user.Teacher.classes.all()
+	print(classes)
+	context = {classes:classes}
 	return render(request, 'Student/createListStudent.html',context)
 
 def teacherReport(request):
