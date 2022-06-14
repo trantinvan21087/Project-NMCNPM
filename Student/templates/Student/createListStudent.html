@@ -24,7 +24,7 @@
         <div class="content">
             <div class="class-list">
                 {% for i in classes %}
-                <p><a id="classone" href="{% url 'createListStudent' classes=i.name%}">{{i.name}}</a></p>
+                <p><a id="classone" href="{% url 'createListStudent' curClasses=i.name%}">{{i.name}}</a></p>
                 {% endfor %}
             </div>
             <div class="class-info">
@@ -32,29 +32,33 @@
                     <div class="ho-ten">
                         <p>Họ tên</p>
                         <ul>
-                            <li>Đinh Nhật Tường</li>
+                            {% for i in students %}
+                            <li>{{i.name}}</li>
+                            {% endfor %}
                         </ul>
                     </div>
                     <div class="diem-hk1">
                         <p>TB học kỳ 1</p>
                         <ul>
-                            <li>2</li>
+                            {% for i in avgScores1 %}
+                            <li>{{i}}</li>
+                            {% endfor %}   
                         </ul>
                     </div>
                     <div class="diem-hk2">
                         <p>TB học kỳ 2</p>
                         <ul>
-                            <li>0.5</li>
+                            {% for i in avgScores2 %}
+                            <li>{{i}}</li>
+                            {% endfor %}   
                         </ul>
                     </div>
                     <div class="chinh-sua">
                         <p>Chỉnh sửa</p>
                         <ul>
-                            <li>
-                                <button type="submit" class="edit-diem"><a href="">Sửa</a></button>
-                            </li>
-                            <li>
-                                <button type="submit" class="edit-diem"><a href="">Sửa</a></button>
+                            <li>{% for i in students %}
+                                <button type="submit" class="edit-diem"><a href="{% url 'changeScore' id=i.id%}">Sửa</a></button>
+                                {% endfor %} 
                             </li>
                         </ul>
                     </div>
