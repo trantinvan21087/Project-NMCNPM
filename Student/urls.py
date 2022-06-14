@@ -11,6 +11,5 @@ urlpatterns = [
     path('studentSetting/',views.accountSettings, name = "studentSetting"),
     path('searchStudent/',views.searchStudent, name = 'searchStudent'),
     path('editScore/',views.editScore, name = 'editScore'),
-    path('createListStudent/<str:curClasses>',views.createListStudent, name = 'createListStudent'),
-    path('changeScore/<str:id>',views.changeScore, name = 'changeScore')
+    path('createListStudent/<str:classes>',views.createListStudent, name = 'createListStudent'),
 ]

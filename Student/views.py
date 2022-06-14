@@ -119,7 +119,11 @@ def editScore(request):
 def createListStudent(request,classes):
 	classes = request.user.Teacher.classes.all()
 	print(classes)
+<<<<<<< HEAD
 	context = {classes:classes}
+=======
+	context = {'classes':classes}
+>>>>>>> parent of 7c36ee4 (changeScore)
 	return render(request, 'Student/createListStudent.html',context)
 
 def teacherReport(request):
