@@ -164,10 +164,10 @@ def changeScore(request, id):
 	studentScore = student.score_set.all()
 	form1 = ScoreForm(instance=studentScore[0])
 	form2 = ScoreForm(instance=studentScore[1])
-	form1.Meta.exclude = ['semester']
 	if request.method == 'POST':
-		form1 = ScoreForm(request.POST, request.FILES,instance=student)
-		form2 = ScoreForm(request.POST, request.FILES,instance=student)
+		print (request.POST)
+		form1 = ScoreForm(request.POST, request.FILES,instance=studentScore[0])
+		form2 = ScoreForm(request.POST, request.FILES,instance=studentScore[1])
 		if form1.is_valid() and form2.is_valid():
 			form1.save()
 			form2.save()
