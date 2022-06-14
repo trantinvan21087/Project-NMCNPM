@@ -94,3 +94,14 @@ def subjectScore(Score, name):
 	elif name == "Văn" : return Score.Van
 	elif name == "Đạo đức" : return Score.Daoduc
 	elif name == "Thể dục" : return Score.Theduc
+
+def subjectVar(name):
+	if name == "Toán" : return 'Toan'
+	elif name == "Lý" : return 'Ly'
+	elif name == "Hóa" : return 'Hoa'
+	elif name == "Sinh" : return 'Sinh'
+	elif name == "Sử" : return 'Su'
+	elif name == "Địa" : return 'Dia'
+	elif name == "Văn" : return 'Van'
+	elif name == "Đạo đức" : return 'Daoduc'
+	elif name == "Thể dục" : return 'Theduc'

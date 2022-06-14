@@ -17,7 +17,24 @@ class CustomerForm(ModelForm):
 		exclude = ['user']
 
 class ScoreForm(ModelForm):
+	def __init__(self, *args, **kwargs):
+		subject = kwargs.pop('subject')
+		super(ScoreForm, self).__init__(*args, **kwargs)
+		temp = self.fields.copy()
+		for i in temp:
+			if not i == subject:
+				self.fields.pop(i)
 	class Meta:
 		model = Score
 		fields = '__all__'
 		exclude = ['students','semester']
+
+# class RandomForm(ModelForm):
+#     def __init__(self, *args, **kwargs):
+#         super(RandomForm, self).__init__(*args, **kwargs)
+#         if not self.instance:
+#             self.fields.pop('active')
+
+#     class Meta:
+#         model = models.Service
+#         fields = (...some fields...)

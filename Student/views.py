@@ -163,8 +163,8 @@ def accountSettings(request):
 def changeScore(request, id):
 	student = Student.objects.get(id = id)
 	studentScore = student.score_set.all()
-	form1 = ScoreForm(instance=studentScore[0])
-	form2 = ScoreForm(instance=studentScore[1])
+	form1 = ScoreForm(instance=studentScore[0],subject = subjectVar(request.user.Teacher.subject))
+	form2 = ScoreForm(instance=studentScore[1],subject = subjectVar(request.user.Teacher.subject))
 	if request.method == 'POST' and 'btnform1' in request.POST:
 		form1 = ScoreForm(request.POST,instance=studentScore[0])
 		if form1.is_valid():
