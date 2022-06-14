@@ -15,3 +15,8 @@ class CustomerForm(ModelForm):
 		model = Student
 		fields = '__all__'
 		exclude = ['user']
+
+class ScoreForm(ModelForm):
+	class Meta:
+		model = Score
+		fields = '__all__'
