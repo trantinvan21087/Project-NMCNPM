@@ -56,10 +56,10 @@
                     <div class="chinh-sua">
                         <p>Chỉnh sửa</p>
                         <ul>
-                            <li>{% for i in students %}
-                                <button type="submit" class="edit-diem"><a href="{% url 'changeScore' id=i.id%}">Sửa</a></button>
-                                {% endfor %} 
-                            </li>
+                            {% for i in students %}
+                            <li><button type="submit" class="edit-diem"><a href="{% url 'changeScore' id=i.id%}">Sửa</a></button></li>
+                            {% endfor %} 
+                            
                         </ul>
                     </div>
                 </div>

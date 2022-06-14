@@ -347,7 +347,7 @@ h4 {
     border: 1px solid black;
     border-radius: 3px;
     width: 50px;
-    padding: 2px;
+    
     text-align: center;
 }
 
@@ -401,10 +401,14 @@ h4 {
     
 }
 
-.ho-ten li, .diem-hk1 li, .diem-hk2 li,
-.chinh-sua li {
+.ho-ten li, .diem-hk1 li, .diem-hk2 li {
     list-style-type: none;
     font-weight: normal;
+    padding-bottom: 20px;
+}
+
+.chinh-sua li {
+    list-style-type: none;
     padding-bottom: 20px;
 }
 
