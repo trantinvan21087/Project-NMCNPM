@@ -116,23 +116,10 @@ def createClass(request):
 def editScore(request):
 	return render(request, 'Student/editScore.html')
 
-def createListStudent(request,curClasses):
+def createListStudent(request,classes):
 	classes = request.user.Teacher.classes.all()
-	students = Student.objects.all()
-	for i in students:
-		if not i.classes.name == curClasses :
-			students.remove(i)
-	avgScores1 = []
-	avgScores2 = []
-
-	for i in students:
-		temp = i.score_set.all()
-		for j in temp:
-			if j.semester == 'học kỳ 1':
-				avgScores1.append(subjectScore(j, request.user.Teacher.subject))
-			else:
-				avgScores2.append(subjectScore(j, request.user.Teacher.subject))
-	context = {'classes':classes, 'students':students,'avgScores1':avgScores1,'avgScores2':avgScores2}
+	print(classes)
+	context = {classes:classes}
 	return render(request, 'Student/createListStudent.html',context)
 
 def teacherReport(request):
@@ -157,21 +144,3 @@ def accountSettings(request):
 
 	context = {'form':form}
 	return render(request, 'Student/account_setting.html', context)
-
-
-def changeScore(request, id):
-	student = Student.objects.get(id = id)
-	studentScore = student.score_set.all()
-	form1 = ScoreForm(instance=studentScore[0])
-	form2 = ScoreForm(instance=studentScore[1])
-	form1.Meta.exclude = ['semester']
-	if request.method == 'POST':
-		form1 = ScoreForm(request.POST, request.FILES,instance=student)
-		form2 = ScoreForm(request.POST, request.FILES,instance=student)
-		if form1.is_valid() and form2.is_valid():
-			form1.save()
-			form2.save()
-			instance = request.user.Teacher.classes.all()[0].name
-			return redirect('createListStudent',curClasses = instance)
-	context = {'form1':form1,'form2':form2}
-	return render(request, 'Student/changeScore.html', context)
