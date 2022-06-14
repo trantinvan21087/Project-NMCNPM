@@ -72,7 +72,8 @@ Vào trang web Heroku để quản lý tài nguyên của app:
 - [x] Hoàn thành các document
 
 ### 8. Future work  <!-- Future works: tóm tắt những gì cần làm thêm (có thể bổ sung cho đến present cuối kỳ) -->
-TBA
+- Hoàn thành thêm một số yêu cầu trong MVP planning
+- Đấu giá project
 
 ### 9. Nguồn tham khảo  <!-- Tham khảo chéo các project liên quan nếu có (backend thì giới thiệu link tham khảo frontend và ngược lại) -->
 https://github.com/topics/student-management?o=desc&s=stars
