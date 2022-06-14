@@ -20,3 +20,4 @@ class ScoreForm(ModelForm):
 	class Meta:
 		model = Score
 		fields = '__all__'
+		exclude = ['students','semester']

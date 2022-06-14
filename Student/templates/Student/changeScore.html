@@ -25,11 +25,23 @@
 		<div class="content">
 			<form method="POST" action="" enctype="multipart/form-data">
 				{% csrf_token %}
+                <br>
+                <h4>Học kỳ 1</h4>
 				{{form1.as_p}}
-                {{form2.as_p}}
+<!--                 <br>
+                <h4>Học kỳ 2</h4>
+                {{form2.as_p}} -->
 		
 			<input class="btn btn-primary" type="submit" name="Update Information">
 			</form>
+            
+            <form method="POST" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <br>
+                <h4>Học kỳ 2</h4>
+                {{form2.as_p}}
+            <input class="btn btn-primary" type="submit" name="Update Information">
+            </form>
 		</div>
 
 	</div>
