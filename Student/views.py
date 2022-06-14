@@ -164,14 +164,19 @@ def changeScore(request, id):
 	studentScore = student.score_set.all()
 	form1 = ScoreForm(instance=studentScore[0])
 	form2 = ScoreForm(instance=studentScore[1])
-	if request.method == 'POST':
-		print (request.POST)
-		form1 = ScoreForm(request.POST, request.FILES,instance=studentScore[0])
-		form2 = ScoreForm(request.POST, request.FILES,instance=studentScore[1])
-		if form1.is_valid() and form2.is_valid():
+	if request.method == 'POST' and 'btnform1' in request.POST:
+		form1 = ScoreForm(request.POST,instance=studentScore[0])
+		if form1.is_valid():
 			form1.save()
+			instance = request.user.Teacher.classes.all()[0].name
+			return redirect('createListStudent',curClasses = instance)
+
+	if request.method == 'POST' and 'btnform2' in request.POST:
+		form2 = ScoreForm(request.POST,instance=studentScore[1])
+		if form2.is_valid():
 			form2.save()
 			instance = request.user.Teacher.classes.all()[0].name
 			return redirect('createListStudent',curClasses = instance)
+
 	context = {'form1':form1,'form2':form2}
 	return render(request, 'Student/changeScore.html', context)
