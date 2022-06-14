@@ -62,10 +62,14 @@ Vào trang web Heroku để quản lý tài nguyên của app:
 Đồ án được deploy tại [link](https://student-management-09.herokuapp.com/)
 
 ### 6. Link demo project <!-- Link Google Drive hoặc Youtube video demo (có thể bổ sung cho đến present cuối kỳ) -->
-[Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing) (TBA)
+[Google Drive](https://drive.google.com/drive/folders/1ibR6lSzFQP0H9uKOjFmbjEPT_IfP_PN-?usp=sharing)
 
 ### 7. Current status  <!-- Current status: tóm tắt những gì đã hoàn thành (có thể bổ sung cho đến present cuối kỳ) -->
-TBA
+- [x] Đầy đủ các chức năng theo yêu cầu
+- [x] Hoàn thành xong web application
+- [x] Hoàn thành final project presentation
+- [x] Hoàn thành demo
+- [x] Hoàn thành các document
 
 ### 8. Future work  <!-- Future works: tóm tắt những gì cần làm thêm (có thể bổ sung cho đến present cuối kỳ) -->
 TBA
