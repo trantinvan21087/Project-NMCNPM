@@ -118,10 +118,11 @@ def editScore(request):
 
 def createListStudent(request,curClasses):
 	classes = request.user.Teacher.classes.all()
-	students = Student.objects.all()
-	for i in students:
-		if not i.classes.name == curClasses :
-			students.remove(i)
+	temp = Student.objects.all()
+	students = []
+	for i in temp:
+		if i.classes.name == curClasses :
+			students.append(i)
 	avgScores1 = []
 	avgScores2 = []
 
