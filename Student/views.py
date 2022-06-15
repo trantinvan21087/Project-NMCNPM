@@ -166,14 +166,14 @@ def changeScore(request, id):
 	form1 = ScoreForm(instance=studentScore[0],subject = subjectVar(request.user.Teacher.subject))
 	form2 = ScoreForm(instance=studentScore[1],subject = subjectVar(request.user.Teacher.subject))
 	if request.method == 'POST' and 'btnform1' in request.POST:
-		form1 = ScoreForm(request.POST,instance=studentScore[0])
+		form1 = ScoreForm(request.POST,instance=studentScore[0],subject = subjectVar(request.user.Teacher.subject))
 		if form1.is_valid():
 			form1.save()
 			instance = request.user.Teacher.classes.all()[0].name
 			return redirect('createListStudent',curClasses = instance)
 
 	if request.method == 'POST' and 'btnform2' in request.POST:
-		form2 = ScoreForm(request.POST,instance=studentScore[1])
+		form2 = ScoreForm(request.POST,instance=studentScore[1],subject = subjectVar(request.user.Teacher.subject))
 		if form2.is_valid():
 			form2.save()
 			instance = request.user.Teacher.classes.all()[0].name
