@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class Classes(models.Model):
@@ -65,24 +66,24 @@ class Score(models.Model):
 	semester = models.CharField(max_length = 200, null = True, choices = SEMESTER)
 	students = models.ForeignKey(Student, null = True, on_delete = models.CASCADE)
 
-	Toan = models.FloatField(default=0)
-	Ly =  models.FloatField(default=0)
-	Hoa =  models.FloatField(default=0)
-	Sinh =  models.FloatField(default=0)
-	Su = models.FloatField(default=0)
-	Dia = models.FloatField(default=0)
-	Van = models.FloatField(default=0)
-	Daoduc = models.FloatField(default=0)
-	TheDuc = models.FloatField(default=0)
+	Toan = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Ly =  models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Hoa =  models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Sinh =  models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Su = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Dia = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Van = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	Daoduc = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
+	TheDuc = models.FloatField(default=0,validators=[MinValueValidator(0.0), MaxValueValidator(10.0)])
 	class Meta:
 		unique_together = ('semester', 'students')
 	def __str__(self):
 		return self.students.name +' '+ self.semester
 
 def AvgScore(Score):
-	return (float(Score.Toan) + float(Score.Ly) + float(Score.Hoa)
+	return round((float(Score.Toan) + float(Score.Ly) + float(Score.Hoa)
 	 + float(Score.Sinh) + float(Score.Su) + float(Score.Dia) 
-	 + float(Score.Van) + float(Score.Daoduc) + float(Score.TheDuc))/9
+	 + float(Score.Van) + float(Score.Daoduc) + float(Score.TheDuc))/9,1)
 
 def subjectScore(Score, name):
 	if name == "Toán" : return Score.Toan
