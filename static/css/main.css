@@ -19,6 +19,18 @@ body {
     height: 100%;
 }
 
+.main-container-login {
+    /*Css for container that contains all elements*/
+    border: 1px solid gray;
+    padding: 40px;
+    margin-left: 570px;
+    margin-right: 570px;
+    margin-top: 200px;
+    border-radius: 14px;
+    background-color: antiquewhite;
+    height: 350px;
+}
+
 
 /*Css for navigation top that contains ĐHKHTN, ADMIN AND ĐĂNG XUẤT*/
 
@@ -80,6 +92,24 @@ h2 {
     justify-content: space-evenly;
     height: 100%;
 }
+
+.nut-login {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.login-center {
+    display: block;
+    text-align: center;
+}
+
+.login-center-1 {
+    padding-top: 27px;
+    display: block;
+    text-align: center;
+}
+
+
 
 .search {
     display: flex;
