@@ -81,9 +81,9 @@ class Score(models.Model):
 		return self.students.name +' '+ self.semester
 
 def AvgScore(Score):
-	return (float(Score.Toan) + float(Score.Ly) + float(Score.Hoa)
+	return round((float(Score.Toan) + float(Score.Ly) + float(Score.Hoa)
 	 + float(Score.Sinh) + float(Score.Su) + float(Score.Dia) 
-	 + float(Score.Van) + float(Score.Daoduc) + float(Score.TheDuc))/9
+	 + float(Score.Van) + float(Score.Daoduc) + float(Score.TheDuc))/9,1)
 
 def subjectScore(Score, name):
 	if name == "Toán" : return Score.Toan
