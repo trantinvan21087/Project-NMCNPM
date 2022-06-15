@@ -116,6 +116,8 @@ def createClass(request):
 def editScore(request):
 	return render(request, 'Student/editScore.html')
 
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Teacher'])
 def createListStudent(request,curClasses):
 	classes = request.user.Teacher.classes.all()
 	temp = Student.objects.all()
@@ -159,7 +161,8 @@ def accountSettings(request):
 	context = {'form':form}
 	return render(request, 'Student/account_setting.html', context)
 
-
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['Teacher'])
 def changeScore(request, id):
 	student = Student.objects.get(id = id)
 	studentScore = student.score_set.all()
