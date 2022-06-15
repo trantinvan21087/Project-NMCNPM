@@ -1,7 +1,25 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.exceptions import ValidationError
 # Create your models here.
+
+class Rule(models.Model):
+	maxStudent = models.IntegerField(default=40)
+	minimumScore = models.FloatField(default=3.0)
+	def save(self, *args, **kwargs):
+		if not self.pk and Rule.objects.exists():
+		# if you'll not check for self.pk 
+		# then error will also raised in update of exists model
+			raise ValidationError('There is can be only one rule instance')
+		return super(Rule, self).save(*args, **kwargs)
+
+rule = Rule.objects.all().first()
+maxStudentNum = rule.maxStudent
+
+def restrict_amount(value):
+    if Student.objects.filter(classes = value).count() > maxStudentNum:
+        raise ValidationError('vượt quá số học sinh giới hạn')
 
 class Classes(models.Model):
 	CATEGORY = (
@@ -24,7 +42,7 @@ class Student(models.Model):
 	birthday = models.DateField(null = True)
 	email = models.CharField(max_length = 200, null = True)
 	house_location = models.CharField(max_length = 200, null = True)
-	classes = models.ForeignKey(Classes, null = True, on_delete = models.CASCADE)
+	classes = models.ForeignKey(Classes, null = True,validators=(restrict_amount, ) ,on_delete = models.CASCADE)
 	def __str__(self):
 		return self.name
 
@@ -106,3 +124,4 @@ def subjectVar(name):
 	elif name == "Văn" : return 'Van'
 	elif name == "Đạo đức" : return 'Daoduc'
 	elif name == "Thể dục" : return 'Theduc'
+

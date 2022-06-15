@@ -14,7 +14,7 @@ class CustomerForm(ModelForm):
 	class Meta:
 		model = Student
 		fields = '__all__'
-		exclude = ['user']
+		exclude = ['user','classes']
 
 class ScoreForm(ModelForm):
 	def __init__(self, *args, **kwargs):
